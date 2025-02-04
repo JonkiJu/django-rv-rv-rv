@@ -1,0 +1,618 @@
+{% load static %}
+{% load compress %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+        <link rel="stylesheet" href="{% static 'css/vanilla-calendar/index.css' %}">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        {% compress css %}
+        <link href="{% static 'scss/main.scss' %}" rel="stylesheet" type="text/x-scss"/>
+       {% endcompress %}
+        <title>rv-rv-rv</title>
+    </head>
+    <body>
+        {% include '_include/header.html' %}
+
+{#  SECTION JUMBOTRON #}
+        <div class="jumbotron d-flex justify-content-center overflow-hidden align-items-center">
+            <img src="/static/img/header-bg.png" alt="bg" class="p-3">
+            <div class="container d-flex flex-column justify-content-center align-items-center">
+                <div class="jumbotron__section d-flex flex-column justify-content-center align-items-center pb-4">
+                    <div class="jumbotron__title">Discover your next great outdoor journey with us</div>
+                    <div class="jumbotron__text">Discover the best RV, camper van or travel trailer rental for your next vacation.</div>
+                </div>
+                <div class="col-lg-8 col-md-6 col-12">
+                <div class="jumbotron__info d-flex flex-column ">
+                    <div class="row mb-4">
+                        <div class="col-lg-4 border-end">
+                            <div class="jumbotron__info-title">Location</div>
+                            <input type="text" id="locationInput" readonly placeholder="City, airport, address or hotel">
+                            <div id="locationDropdown" class="location__dropdown hidden">
+                                <div class="location__dropdown-inner">
+                                    <ul class="gap-2 d-flex flex-column">
+                                        <!-- Створюємо 20 елементів списку з різними ID -->
+                                        <li id="state-1" class="location__dropdown-item">State 1</li>
+                                        <li id="state-2" class="location__dropdown-item">State 2</li>
+                                        <li id="state-3" class="location__dropdown-item">State 3</li>
+                                        <li id="state-4" class="location__dropdown-item">State 4</li>
+                                        <li id="state-5" class="location__dropdown-item">State 5</li>
+                                        <li id="state-6" class="location__dropdown-item">State 6</li>
+                                        <li id="state-7" class="location__dropdown-item">State 7</li>
+                                        <li id="state-8" class="location__dropdown-item">State 8</li>
+                                        <li id="state-9" class="location__dropdown-item">State 9</li>
+                                        <li id="state-10" class="location__dropdown-item">State 10</li>
+                                        <li id="state-11" class="location__dropdown-item">State 11</li>
+                                        <li id="state-12" class="location__dropdown-item">State 12</li>
+                                        <li id="state-13" class="location__dropdown-item">State 13</li>
+                                        <li id="state-14" class="location__dropdown-item">State 14</li>
+                                        <li id="state-15" class="location__dropdown-item">State 15</li>
+                                        <li id="state-16" class="location__dropdown-item">State 16</li>
+                                        <li id="state-17" class="location__dropdown-item">State 17</li>
+                                        <li id="state-18" class="location__dropdown-item">State 18</li>
+                                        <li id="state-19" class="location__dropdown-item">State 19</li>
+                                        <li id="state-20" class="location__dropdown-item">State 20</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 border-end">
+                            <div class="jumbotron__info-title">Location</div>
+                            <div class="jumbotron__info-text d-flex align-items-center">
+                                <div class="d-flex align-items-center me-2">
+                                    <input type="text" id="calendar" placeholder="Start-date" />
+                                    <img src="/static/img/arrow-down.svg" alt="arrow">
+                                </div>
+                                <div class="d-flex align-items-center ">
+                                    <input type="text" id="secondCalendarInput" placeholder="End-date">
+                                    <img src="/static/img/arrow-down.svg" alt="arrow">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="jumbotron__info-title">Guest</div>
+                            <input type="text" id="guestInput" readonly placeholder="0 guest">
+                            <div id="inputWindow" class="guest__input-window hidden">
+                                <div class="guest__input-window__controls">
+                                    <button id="decreaseBtn" class="control__btn minus"></button>
+                                    <span id="guestCount">0</span>
+                                    <button id="increaseBtn" class="control__btn plus"></button>
+                                </div>
+                                <button id="okBtn" class="ok__btn">OK</button>
+                            </div>
+
+
+
+
+
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-outline-dark col-6 mx-auto">Search</button>
+                </div>
+                </div>
+
+            </div>
+        </div>
+{# END  SECTION JUMBOTRON #}
+
+{#  SECTION LOREN #}
+        <div class="container container__loren">
+        <div class="row d-flex justify-content-center">
+            <div class="col-xl-5 col-12  lorem__photo d-flex">
+                <div class="row gx-3">
+                    <div class="col-4">
+                        <img src="static/img/Rectangle-19.jpg" alt="car_photo" class="w-100">
+                    </div>
+                    <div class="col-4">
+                        <img src="static/img/Rectangle-20.jpg" alt="car_photo" class="w-100">
+                    </div>
+                    <div class="col-4">
+                        <img src="static/img/Rectangle-21.jpg" alt="car_photo" class="w-100">
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-xl-5 col-12 offset-xl-2 lorem__text d-flex flex-column justify-content-center mt-3">
+                <h2 class="lorem-h2">LOREM IPSUM</h2>
+                <p>Lorem ipsum dolor sit amet consectetur. Ornare massa eget in mi dapibus in scelerisque quis sed. Sed facilisis ut turpis velit morbi diam morbi lacus. Diam iaculis ut est rutrum. Quis non velit imperdiet nibh. Quisque in enim viverra aliquet felis penatibus sit a eu. Massa risus eget platea praesent. Eget cursus eu adipiscing et. Cursus pellentesque fermentum consequat nunc turpis integer vitae in bibendum. Non fringilla dolor feugiat etiam fringilla facilisis nulla dictum convallis pellentesque.</p>
+            </div>
+        </div>
+    </div>
+{# END SECTION LOREN#}
+
+{#   SECTION CITY     #}
+        <div class="container container__city">
+            <div class="row g-3">
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 card__city">
+                    <a href="#">
+                        <img src="/static/img/los-angeles.png" alt="city" class="w-100">
+                        <card class="card__title">
+                            <h2>Los Angeles, CA</h2>
+                            <h3>2,834 RV rentals</h3>
+                        </card>
+                        <img src="./static/img/circle-arrow.svg" alt="" class="card__arrow">
+
+                        <div class="lear__more d-flex justify-content-center mb-3">
+                            <p class="m-0 pe-2">Learn more</p>
+                            <img src="/static/img/small-arrow.svg" alt="" class="card__small-arrow">
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 card__city">
+                    <a href="#">
+                        <img src="../../static/img/san-francisco.png" alt="city" class="w-100">
+                        <card class="card__title">
+                            <h2>Los Angeles, CA</h2>
+                            <h3>2,834 RV rentals</h3>
+                        </card>
+                        <img src="./static/img/circle-arrow.svg" alt="" class="card__arrow">
+
+                        <div class="lear__more d-flex justify-content-center mb-3">
+                            <p class="m-0 pe-2">Learn more</p>
+                            <img src="/static/img/small-arrow.svg" alt="" class="card__small-arrow">
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 card__city">
+                    <a href="#">
+                        <img src="/static/img/denver.png" alt="city" class="w-100">
+                        <card class="card__title">
+                            <h2>Los Angeles, CA</h2>
+                            <h3>2,834 RV rentals</h3>
+                        </card>
+                        <img src="./static/img/circle-arrow.svg" alt="" class="card__arrow">
+
+                        <div class="lear__more d-flex justify-content-center mb-3">
+                            <p class="m-0 pe-2">Learn more</p>
+                            <img src="/static/img/small-arrow.svg" alt="" class="card__small-arrow">
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 card__city">
+                    <a href="#">
+                        <img src="/static/img/seattle.png" alt="city" class="w-100">
+                        <card class="card__title">
+                            <h2>Los Angeles, CA</h2>
+                            <h3>2,834 RV rentals</h3>
+                        </card>
+                        <img src="./static/img/circle-arrow.svg" alt="" class="card__arrow">
+
+                        <div class="lear__more d-flex justify-content-center mb-3">
+                            <p class="m-0 pe-2">Learn more</p>
+                            <img src="/static/img/small-arrow.svg" alt="" class="card__small-arrow">
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 card__city">
+                    <a href="#">
+                        <img src="/static/img/new-york.png" alt="city" class="w-100">
+                        <card class="card__title">
+                            <h2>Los Angeles, CA</h2>
+                            <h3>2,834 RV rentals</h3>
+                        </card>
+                        <img src="./static/img/circle-arrow.svg" alt="" class="card__arrow">
+
+                        <div class="lear__more lear__more-city d-flex justify-content-center mb-3">
+                            <p class="m-0 pe-2">Learn more</p>
+                            <img src="/static/img/small-arrow.svg" alt="" class="card__small-arrow">
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 card__city">
+                    <a href="#">
+                        <img src="/static/img/city-clear-card.png" alt="city" class="w-100">
+                        <card class="card__title card__title-clear">
+                            <h2 class="black">Lorem ipsum</h2>
+                            <h3 class="black">Lorem ipsum dolor sit</h3>
+                        </card>
+                        <img src="./static/img/circle-arrow-reverse.svg" alt="" class="card__arrow">
+
+                        <div class="lear__more lear__more-clear d-flex justify-content-center mb-3">
+                            <p class="m-0 pe-2 black">Learn more</p>
+                            <img src="/static/img/small-arrow-black.svg" alt="" class="card__small-arrow">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+{#    END SECTION CITY #}
+
+{#   SECTION TEXT-LOREM     #}
+    <div class="section__text-lorem overflow-hidden d-flex  align-items-center">
+        <img src="/static/img/text-lorem-bg.png" alt="bg" class="text__lorem-bg ">
+        <div class="container d-flex justify-content-start align-items-center">
+            <div class="col-lg-5 col-md-6 col-12">
+                 <div class="text__lorem d-flex flex-column justify-content-start align-items-start"><img src="" alt="">
+                     <img src="/static/img/white-line.svg" alt="" class="white__line">
+                     <p class="text__lorem-title">Lorem ipsum dolor</p>
+                    <p class="text__lorem-text"> Lorem ipsum dolor sit amet consectetur. Ornare massa eget in mi dapibus in scelerisque quis </p>
+                    <a href="#" class="border-bottom pb-1">BECOME A HOST <img src="/static/img/arrow-right.svg" alt="arrow" class=""></a>
+                 </div>
+            </div>
+        </div>
+
+    </div>
+{#  END SECTION TEXT-LOREM     #}
+
+
+        <div class="container">
+            <div class="row row__for-text d-flex justify-content-center">
+                <div class="col-xl-3 col-lg-4 col-12">
+                    <h2>Lorem ipsum dolor</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur. Quam amet id elementum suspendisse ac tincidunt volutpat neque. Accumsan orci semper enim accumsan dis nulla ultrices. Nam duis nibh nisi aenean turpis elementum id eu. Quam tincidunt mauris magnis tristique sed libero pretium. Id aliquam morbi scelerisque aenean elementum convallis in. Purus natoque tortor sed mi tellus suspendisse. Amet sed est eget suspendisse turpis lectus turpis. Arcu proin eu purus in aliquet sed duis ultricies vitae sit pellentesque.</p>
+                </div>
+                <div class="col-xl-4  col-lg-4 col-md-6 col-sm-8 col-12 offset-xl-1">
+                    <img src="/static/img/rectangle-33.png" alt="photo" class="w-100">
+                </div>
+                <div class="col-xl-3 col-lg-4 col-12 offset-xl-1">
+                    <p>Lorem ipsum dolor sit amet consectetur. Quam amet id elementum suspendisse ac tincidunt volutpat neque. Accumsan orci semper enim accumsan dis nulla ultrices. Nam duis nibh nisi aenean turpis elementum id eu. Quam tincidunt mauris magnis tristique sed libero pretium. Id aliquam morbi scelerisque aenean elementum convallis in. Purus natoque tortor sed mi tellus suspendisse. Amet sed est eget suspendisse turpis lectus turpis. Arcu proin eu purus in aliquet sed duis ultricies vitae sit pellentesque.</p>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+{#         FAQ        #}
+
+
+    <div class="container container__faq">
+        <div class="accordion__title">
+        Faq
+        </div>
+        <img src="/static/img/FAQ-arrow.svg" alt="faq-arrow" class="faq__arrow">
+        <div class="row g-3">
+            <div class="accordion" id="accordionExample1">
+                <div class="row ">
+                    <div class="col-xl-6 ps-4">
+                            <div class="accordion-item mb-3">
+                                <h2 class="accordion-header" id="flush-heading1">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse1" aria-expanded="false" aria-controls="flush-collapse1">
+                                        Lorem ipsum dolor sit amet consectetur. Ornare massa eget in mi dapibus in scelerisque quis
+                                    </button>
+                                </h2>
+                                <div id="flush-collapse1" class="accordion-collapse collapse" aria-labelledby="flush-heading1" data-bs-parent="#accordionExample1">
+                                    <div class="accordion-body">
+                                        Lorem ipsum dolor sit amet consectetur. Porta sit feugiat accumsan sit semper enim. Mus urna nullam orci at. Posuere faucibus condimentum augue neque hendrerit viverra pharetra. Duis felis proin venenatis cursus in sed. Neque in sed sed orci rhoncus augue massa.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item mb-3">
+                                <h2 class="accordion-header" id="flush-heading2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse2" aria-expanded="false" aria-controls="flush-collapse2">
+                                        Lorem ipsum dolor sit amet consectetur. Ornare massa eget in mi dapibus in scelerisque quis
+                                    </button>
+                                </h2>
+                                <div id="flush-collapse2" class="accordion-collapse collapse" aria-labelledby="flush-heading2" data-bs-parent="#accordionExample1">
+                                    <div class="accordion-body">
+                                        Lorem ipsum dolor sit amet consectetur. Porta sit feugiat accumsan sit semper enim. Mus urna nullam orci at. Posuere faucibus condimentum augue neque hendrerit viverra pharetra. Duis felis proin venenatis cursus in sed. Neque in sed sed orci rhoncus augue massa.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item mb-3">
+                            <h2 class="accordion-header" id="flush-heading3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse3" aria-expanded="false" aria-controls="flush-collapse3">
+                                    Lorem ipsum dolor sit amet consectetur. Ornare massa eget in mi dapibus in scelerisque quis
+                                </button>
+                            </h2>
+                            <div id="flush-collapse3" class="accordion-collapse collapse" aria-labelledby="flush-heading3" data-bs-parent="#accordionExample1">
+                                <div class="accordion-body">
+                                    Lorem ipsum dolor sit amet consectetur. Porta sit feugiat accumsan sit semper enim. Mus urna nullam orci at. Posuere faucibus condimentum augue neque hendrerit viverра pharetra. Duis felis proin venenatis cursus in sed. Neque in sed sed orci rhoncus augue масса.
+                                </div>
+                            </div>
+                        </div>
+                            <div class="accordion-item mb-3">
+                            <h2 class="accordion-header" id="flush-heading4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse4" aria-expanded="false" aria-controls="flush-collapse4">
+                                    Lorem ipsum dolor sit amet consectetur. Ornare massa eget in mi dapibus in scelerisque quis
+                                </button>
+                            </h2>
+                            <div id="flush-collapse4" class="accordion-collapse collapse" aria-labelledby="flush-heading4" data-bs-parent="#accordionExample1">
+                                <div class="accordion-body">
+                                    Lorem ipsum dolor sit amet consectetur. Porta sit feugiat accumsan sit semper enim. Mus urna nullam orci at. Posuere faucibus condimentum augue neque hendrerit viverра pharetra. Duis felis proin venenatis cursus in sed. Neque in sed sed orci rhoncus augue масса.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 ps-4">
+                            <div class="accordion-item mb-3">
+                                <h2 class="accordion-header" id="flush-heading5">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapse5">
+                                        Lorem ipsum dolor sit amet consectetur. Ornare massa eget in mi dapibus in scelerisque quis
+                                    </button>
+                                </h2>
+                                <div id="flush-collapse5" class="accordion-collapse collapse" aria-labelledby="flush-heading5" data-bs-parent="#accordionExample1">
+                                    <div class="accordion-body">
+                                        Lorem ipsum dolor sit amet consectetur. Porta sit feugiat accumsan sit semper enim. Mus urna nullam orci at. Posuere faucibus condimentum augue neque hendrerit viverра pharetra. Duis felis proin venenatis cursus in sed. Neque in sed sed orci rhoncus augue масса.
+                                    </div>
+                                </div>
+                                </div>
+                            <div class="accordion-item mb-3">
+                            <h2 class="accordion-header" id="flush-heading6">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse6" aria-expanded="false" aria-controls="flush-collapse6">
+                                    Lorem ipsum dolor sit amet consectetur. Ornare massa eget in mi dapibus in scelerisque quis
+                                </button>
+                            </h2>
+                            <div id="flush-collapse6" class="accordion-collapse collapse" aria-labelledby="flush-heading6" data-bs-parent="#accordionExample1">
+                                <div class="accordion-body">
+                                    Lorem ipsum dolor sit amet consectetur. Porta sit feugiat accumsan sit semper enim. Mus urna nullam orci at. Posuere faucibus condimentum augue neque hendrerит viverра pharetra. Duis felis proin venenatis cursus in sed. Neque in sed sed orci rhoncus augue масса.
+                                </div>
+                            </div>
+                            </div>
+                            <div class="accordion-item mb-3">
+                            <h2 class="accordion-header" id="flush-heading7">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse7" aria-expanded="false" aria-controls="flush-collapse7">
+                                    Lorem ipsum dolor sit amet consectetur. Ornare massa eget in mi dapibus in scelerisque quis
+                                </button>
+                            </h2>
+                            <div id="flush-collapse7" class="accordion-collapse collapse" aria-labelledby="flush-heading7" data-bs-parent="#accordionExample1">
+                                <div class="accordion-body">
+                                    Lorem ipsum dolor sit amet consectetur. Porta sit feugiat accumsan sit semper enim. Mus urna nullam orci at. Posuere faucibus condimentum augue neque hendrerит viverра pharetra. Duis felis proin venenatis cursus in sed. Neque in sed sed orci rhoncus augue масса.
+                                </div>
+                            </div>
+                            </div>
+                            <div class="accordion-item mb-3">
+                            <h2 class="accordion-header" id="flush-heading8">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse8" aria-expanded="false" aria-controls="flush-collapse8">
+                                    Lorem ipsum dolor sit amet consectetur. Ornare massa eget in mi dapibus in scelerisque quis
+                                </button>
+                            </h2>
+                            <div id="flush-collapse8" class="accordion-collapse collapse" aria-labelledby="flush-heading8" data-bs-parent="#accordionExample1">
+                                <div class="accordion-body">
+                                    Lorem ipsum dolor sit amet consectetur. Porta sit feugiat accumsan sit semper enim. Mus urna nullam orci at. Posuere faucibus condimentum augue neque hendrerит viverра pharetra. Duis felis proin venenatis cursus in sed. Neque in sed sed orci rhoncus augue масса.
+                                </div>
+                            </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+{#              POPULAR         #}
+        <div class="container popular">
+            <p class="popular__title"> Popular RV Rental Destinations</p>
+            <div class="row g-3">
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <a href="#" class="no-underline">
+                        <div class="popular__title-btn">
+                        <h2 class="m-0 no-underline">Los Angeles, CA</h2>
+                        <p class="m-0">2,834 RV rentals</p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <a href="#" class="no-underline">
+                        <div class="popular__title-btn">
+                        <h2 class="m-0 no-underline">Los Angeles, CA</h2>
+                        <p class="m-0">2,834 RV rentals</p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <a href="#" class="no-underline">
+                        <div class="popular__title-btn">
+                        <h2 class="m-0 no-underline">Los Angeles, CA</h2>
+                        <p class="m-0">2,834 RV rentals</p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <a href="#" class="no-underline">
+                        <div class="popular__title-btn">
+                        <h2 class="m-0 no-underline">Los Angeles, CA</h2>
+                        <p class="m-0">2,834 RV rentals</p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <a href="#" class="no-underline">
+                        <div class="popular__title-btn">
+                        <h2 class="m-0 no-underline">Los Angeles, CA</h2>
+                        <p class="m-0">2,834 RV rentals</p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <a href="#" class="no-underline">
+                        <div class="popular__title-btn">
+                        <h2 class="m-0 no-underline">Los Angeles, CA</h2>
+                        <p class="m-0">2,834 RV rentals</p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <a href="#" class="no-underline">
+                        <div class="popular__title-btn">
+                        <h2 class="m-0 no-underline">Los Angeles, CA</h2>
+                        <p class="m-0">2,834 RV rentals</p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <a href="#" class="no-underline">
+                        <div class="popular__title-btn">
+                        <h2 class="m-0 no-underline">Los Angeles, CA</h2>
+                        <p class="m-0">2,834 RV rentals</p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <a href="#" class="no-underline">
+                        <div class="popular__title-btn">
+                        <h2 class="m-0 no-underline">Los Angeles, CA</h2>
+                        <p class="m-0">2,834 RV rentals</p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <a href="#" class="no-underline">
+                        <div class="popular__title-btn">
+                        <h2 class="m-0 no-underline">Los Angeles, CA</h2>
+                        <p class="m-0">2,834 RV rentals</p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <a href="#" class="no-underline">
+                        <div class="popular__title-btn">
+                        <h2 class="m-0 no-underline">Los Angeles, CA</h2>
+                        <p class="m-0">2,834 RV rentals</p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <a href="#" class="no-underline">
+                        <div class="popular__title-btn">
+                        <h2 class="m-0 no-underline">Los Angeles, CA</h2>
+                        <p class="m-0">2,834 RV rentals</p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <a href="#" class="no-underline">
+                        <div class="popular__title-btn">
+                        <h2 class="m-0 no-underline">Los Angeles, CA</h2>
+                        <p class="m-0">2,834 RV rentals</p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <a href="#" class="no-underline">
+                        <div class="popular__title-btn">
+                        <h2 class="m-0 no-underline">Los Angeles, CA</h2>
+                        <p class="m-0">2,834 RV rentals</p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <a href="#" class="no-underline">
+                        <div class="popular__title-btn">
+                        <h2 class="m-0 no-underline">Los Angeles, CA</h2>
+                        <p class="m-0">2,834 RV rentals</p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <a href="#" class="no-underline">
+                        <div class="popular__title-btn">
+                        <h2 class="m-0 no-underline">Los Angeles, CA</h2>
+                        <p class="m-0">2,834 RV rentals</p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <a href="#" class="no-underline">
+                        <div class="popular__title-btn">
+                        <h2 class="m-0 no-underline">Los Angeles, CA</h2>
+                        <p class="m-0">2,834 RV rentals</p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <a href="#" class="no-underline">
+                        <div class="popular__title-btn">
+                        <h2 class="m-0 no-underline">Los Angeles, CA</h2>
+                        <p class="m-0">2,834 RV rentals</p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <a href="#" class="no-underline">
+                        <div class="popular__title-btn">
+                        <h2 class="m-0 no-underline">Los Angeles, CA</h2>
+                        <p class="m-0">2,834 RV rentals</p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <a href="#" class="no-underline">
+                        <div class="popular__title-btn">
+                        <h2 class="m-0 no-underline">Los Angeles, CA</h2>
+                        <p class="m-0">2,834 RV rentals</p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <a href="#" class="no-underline">
+                        <div class="popular__title-btn">
+                        <h2 class="m-0 no-underline">Los Angeles, CA</h2>
+                        <p class="m-0">2,834 RV rentals</p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <a href="#" class="no-underline">
+                        <div class="popular__title-btn">
+                        <h2 class="m-0 no-underline">Los Angeles, CA</h2>
+                        <p class="m-0">2,834 RV rentals</p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <a href="#" class="no-underline">
+                        <div class="popular__title-btn">
+                        <h2 class="m-0 no-underline">Los Angeles, CA</h2>
+                        <p class="m-0">2,834 RV rentals</p>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <a href="#" class="no-underline">
+                        <div class="popular__title-btn">
+                        <h2 class="m-0 no-underline">Los Angeles, CA</h2>
+                        <p class="m-0">2,834 RV rentals</p>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        {% include '_include/footer.html' %}
+
+
+{#    <script src="https://cdn.jsdelivr.net/npm/vanilla-calendar-pro@3.0.3/dist/vanilla-calendar.min.js"></script>#}
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        <script src="{% static 'js/vanilla-calendar.js' %}" ></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="{% static 'js/main.js' %}"></script>
+    </body>
+</html>

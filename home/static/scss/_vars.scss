@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'ChakraPetch';
+    font-weight: bold;
+    src: url('../fonts/ChakraPetch-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ChakraPetch';
+    font-weight: normal;
+    src: url('../fonts/ChakraPetch-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ProximaNova';
+    font-weight: bold;
+    src: url('../fonts/proximanova_bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'ProximaNova';
+    font-weight: normal;
+    src: url('../fonts/proximanova_regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-weight: bold;
+    src: url('../fonts/Inter_18pt-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-weight: normal;
+    src: url('../fonts/Inter_18pt-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Almarai';
+    font-weight: normal;
+    src: url('../fonts/Almarai-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Alike';
+    font-weight: normal;
+    src: url('../fonts/Alike-Regular.ttf') format('truetype');
+}
+
+// Змінні для використання шрифтів
+$font-family: 'ChakraPetch', sans-serif;
+$second-family: 'ProximaNova', sans-serif;
+$third-family: 'Almarai', sans-serif;
+$font3: 'Inter', sans-serif;
+$font4: 'Alike', sans-serif;

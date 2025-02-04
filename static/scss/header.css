@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'ChakraPetch';
+  font-weight: bold;
+  src: url("../fonts/ChakraPetch-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'ChakraPetch';
+  font-weight: normal;
+  src: url("../fonts/ChakraPetch-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'ProximaNova';
+  font-weight: bold;
+  src: url("../fonts/proximanova_bold.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'ProximaNova';
+  font-weight: normal;
+  src: url("../fonts/proximanova_regular.ttf") format("truetype"); }
+
+header .btn-change {
+  background-image: url(../../static/img/header_btn.svg);
+  width: 180px;
+  height: 30px;
+  border: none;
+  font-family: "ChakraPetch", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #fff; }
+
+/*# sourceMappingURL=header.css.map */

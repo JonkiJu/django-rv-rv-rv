@@ -1,0 +1,425 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'ChakraPetch';
+  font-weight: bold;
+  src: url("/static/fonts/ChakraPetch-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'ChakraPetch';
+  font-weight: normal;
+  src: url("/static/fonts/ChakraPetch-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'ProximaNova';
+  font-weight: bold;
+  src: url("/static/fonts/proximanova_bold.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'ProximaNova';
+  font-weight: normal;
+  src: url("/static/fonts/proximanova_regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'ChakraPetch';
+  font-weight: bold;
+  src: url("/static/fonts/ChakraPetch-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'ChakraPetch';
+  font-weight: normal;
+  src: url("/static/fonts/ChakraPetch-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'ProximaNova';
+  font-weight: bold;
+  src: url("/static/fonts/proximanova_bold.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'ProximaNova';
+  font-weight: normal;
+  src: url("/static/fonts/proximanova_regular.ttf") format("truetype"); }
+
+/* line 3, home/static/scss/header.scss */
+header .btn-change {
+  background-image: url(/static/img/header_btn.svg);
+  width: 180px;
+  height: 30px;
+  border: none;
+  font-family: "ChakraPetch", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #fff;
+  margin-right: 30px; }
+
+@font-face {
+  font-family: 'ChakraPetch';
+  font-weight: bold;
+  src: url("/static/fonts/ChakraPetch-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'ChakraPetch';
+  font-weight: normal;
+  src: url("/static/fonts/ChakraPetch-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'ProximaNova';
+  font-weight: bold;
+  src: url("/static/fonts/proximanova_bold.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'ProximaNova';
+  font-weight: normal;
+  src: url("/static/fonts/proximanova_regular.ttf") format("truetype"); }
+
+/* line 3, home/static/scss/footer.scss */
+.bg-footer {
+  background: #f8f8f8; }
+
+/* line 10, home/static/scss/footer.scss */
+footer .col h5 {
+  padding-bottom: 10px;
+  font-family: "ProximaNova", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: justify;
+  color: #242424; }
+
+/* line 20, home/static/scss/footer.scss */
+footer .col_container {
+  border-top: 1px solid #d9d9d9; }
+  /* line 23, home/static/scss/footer.scss */
+  footer .col_container a {
+    font-family: "ProximaNova", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #242424;
+    text-decoration: none; }
+
+/* line 34, home/static/scss/footer.scss */
+footer .footer__btn .btn {
+  background: #f68619;
+  width: 180px;
+  height: 30px;
+  font-family: "ProximaNova", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+/* line 51, home/static/scss/footer.scss */
+.gw-site {
+  background: #f68619;
+  z-index: 1;
+  height: 30px; }
+  /* line 55, home/static/scss/footer.scss */
+  .gw-site p {
+    font-family: "ChakraPetch", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #fff; }
+
+/* line 9, home/static/scss/main.scss */
+a {
+  display: block;
+  text-decoration: auto; }
+
+/* line 13, home/static/scss/main.scss */
+.top__container {
+  max-width: 1400px;
+  margin: 0 auto; }
+
+/* line 18, home/static/scss/main.scss */
+.jumbotron {
+  position: relative;
+  max-width: 1400px;
+  height: 600px;
+  margin: 0 auto 100px auto; }
+  /* line 23, home/static/scss/main.scss */
+  .jumbotron img {
+    position: absolute; }
+  /* line 26, home/static/scss/main.scss */
+  .jumbotron .container {
+    position: relative; }
+  /* line 31, home/static/scss/main.scss */
+  .jumbotron .jumbotron__section {
+    max-width: 580px; }
+  /* line 34, home/static/scss/main.scss */
+  .jumbotron .jumbotron__title {
+    font-family: "ChakraPetch", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff; }
+    @media (max-width: 768px) {
+      /* line 34, home/static/scss/main.scss */
+      .jumbotron .jumbotron__title {
+        font-size: 24px; } }
+  /* line 45, home/static/scss/main.scss */
+  .jumbotron .jumbotron__text {
+    font-family: "ChakraPetch", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    color: #fff; }
+  /* line 53, home/static/scss/main.scss */
+  .jumbotron .jumbotron__info {
+    border-radius: 20px;
+    padding: 30px;
+    background: #f8f8f8; }
+    /* line 57, home/static/scss/main.scss */
+    .jumbotron .jumbotron__info .btn {
+      border-radius: 20px;
+      max-width: 220px; }
+    /* line 62, home/static/scss/main.scss */
+    .jumbotron .jumbotron__info .jumbotron__info-title {
+      font-family: "ChakraPetch", sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      color: #242424; }
+    /* line 68, home/static/scss/main.scss */
+    .jumbotron .jumbotron__info .jumbotron__info-text {
+      font-family: "ChakraPetch", sans-serif;
+      font-weight: 400;
+      font-size: 12px;
+      color: #242424; }
+      /* line 73, home/static/scss/main.scss */
+      .jumbotron .jumbotron__info .jumbotron__info-text div {
+        position: relative; }
+        /* line 75, home/static/scss/main.scss */
+        .jumbotron .jumbotron__info .jumbotron__info-text div img {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 4px; }
+
+/* line 85, home/static/scss/main.scss */
+.container {
+  max-width: 1180px; }
+  /* line 87, home/static/scss/main.scss */
+  .container .lorem_photo {
+    max-width: 580px; }
+    /* line 89, home/static/scss/main.scss */
+    .container .lorem_photo img {
+      max-width: 180px; }
+  /* line 93, home/static/scss/main.scss */
+  .container .lorem_text {
+    max-width: 480px; }
+    /* line 96, home/static/scss/main.scss */
+    .container .lorem_text h2 {
+      font-family: "ChakraPetch", sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #f68619; }
+    /* line 103, home/static/scss/main.scss */
+    .container .lorem_text p {
+      font-family: "ChakraPetch", sans-serif;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 200%;
+      text-align: justify;
+      color: #242424; }
+
+/* line 116, home/static/scss/main.scss */
+.container__loren {
+  margin-bottom: 100px; }
+
+/* line 120, home/static/scss/main.scss */
+.container__city {
+  margin-bottom: 148px; }
+
+/* line 123, home/static/scss/main.scss */
+.card__city {
+  position: relative; }
+  /* line 125, home/static/scss/main.scss */
+  .card__city .card__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+  /* line 132, home/static/scss/main.scss */
+  .card__city h2 {
+    font-family: "ChakraPetch", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    color: #fff; }
+  /* line 139, home/static/scss/main.scss */
+  .card__city h3 {
+    font-family: "ChakraPetch", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: #fff; }
+  /* line 146, home/static/scss/main.scss */
+  .card__city .card__arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  /* line 153, home/static/scss/main.scss */
+  .card__city .lear__more {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); }
+  /* line 160, home/static/scss/main.scss */
+  .card__city p {
+    text-align: center;
+    font-family: "ChakraPetch", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #fff; }
+  /* line 167, home/static/scss/main.scss */
+  .card__city .black {
+    color: #242424; }
+
+/* line 177, home/static/scss/main.scss */
+.section__text-lorem {
+  position: relative;
+  max-width: 1400px;
+  height: 400px;
+  margin: 0 auto 100px auto; }
+  /* line 183, home/static/scss/main.scss */
+  .section__text-lorem .text__lorem-bg {
+    position: absolute; }
+  /* line 187, home/static/scss/main.scss */
+  .section__text-lorem .container {
+    position: relative;
+    z-index: 2; }
+    /* line 191, home/static/scss/main.scss */
+    .section__text-lorem .container .text__lorem {
+      background: #a77d53;
+      border-radius: 20px;
+      padding: 50px; }
+    /* line 197, home/static/scss/main.scss */
+    .section__text-lorem .container .text__lorem-title {
+      font-family: "ChakraPetch", sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #fff; }
+    /* line 204, home/static/scss/main.scss */
+    .section__text-lorem .container .text__lorem-text {
+      font-family: "ChakraPetch", sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      text-align: justify;
+      color: #fff; }
+    /* line 211, home/static/scss/main.scss */
+    .section__text-lorem .container a {
+      font-family: "ChakraPetch", sans-serif;
+      font-weight: 400;
+      font-size: 12px;
+      color: #fff;
+      text-decoration: none; }
+
+/* line 225, home/static/scss/main.scss */
+.row-for-text h2 {
+  font-family: "ChakraPetch", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #f68619; }
+
+/* line 232, home/static/scss/main.scss */
+.row-for-text p {
+  font-family: "ChakraPetch", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 200%;
+  text-align: justify;
+  color: #242424; }
+
+/* line 240, home/static/scss/main.scss */
+.row-for-text img {
+  padding: 12px 0; }
+
+/* line 246, home/static/scss/main.scss */
+.accordion__title {
+  font-family: "ChakraPetch", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #f68619;
+  padding-bottom: 30px; }
+
+/* line 256, home/static/scss/main.scss */
+.accordion-button:not(.collapsed) {
+  background-color: #f6f7f7;
+  /* Наприклад, синій фон */ }
+
+/* line 260, home/static/scss/main.scss */
+.accordion-button {
+  font-family: "ChakraPetch", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #242424;
+  background-color: #f6f7f7; }
+  /* line 267, home/static/scss/main.scss */
+  .accordion-button:focus {
+    box-shadow: none;
+    outline: none; }
+
+/* Стиль активного вмісту акордеону */
+/* line 274, home/static/scss/main.scss */
+.accordion-collapse.colapsing {
+  background-color: #f6f7f7;
+  /* Світло-сірий фон */ }
+
+/* line 277, home/static/scss/main.scss */
+.accordion-collapse.show {
+  background-color: #f6f7f7;
+  /* Світло-сірий фон */ }
+
+/* line 297, home/static/scss/main.scss */
+.popular {
+  margin-bottom: 100px; }
+
+/* line 300, home/static/scss/main.scss */
+.popular__title {
+  font-family: "ChakraPetch", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #f68619;
+  padding-bottom: 30px; }
+
+/* line 309, home/static/scss/main.scss */
+.popular__title-btn {
+  border-radius: 20px;
+  padding: 10px 20px;
+  background: #f8f8f8;
+  transition: all 0.5s; }
+  /* line 316, home/static/scss/main.scss */
+  .popular__title-btn:hover {
+    background: #a77d53; }
+    /* line 318, home/static/scss/main.scss */
+    .popular__title-btn:hover h2 {
+      color: #fff; }
+    /* line 321, home/static/scss/main.scss */
+    .popular__title-btn:hover p {
+      color: #fff; }
+  /* line 326, home/static/scss/main.scss */
+  .popular__title-btn h2 {
+    font-family: "ChakraPetch", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #242424;
+    text-align: justify;
+    transition: all 0.5s; }
+  /* line 335, home/static/scss/main.scss */
+  .popular__title-btn p {
+    font-family: "ChakraPetch", sans-serif;
+    font-size: 14px;
+    color: #242424;
+    text-align: justify;
+    font-weight: 400;
+    transition: all 0.5s; }
