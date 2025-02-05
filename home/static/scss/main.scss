@@ -495,6 +495,12 @@ a {
         }
     }
 
+
+    .vc-years__year, .vc-months__month {
+        background-color: #fff;
+        color: #141414;
+    }
+
     .vc-months__month, .vc-years__year {
         &[data-vc-months-month-selected], &[data-vc-years-year-selected] {
             background: #f68619;
