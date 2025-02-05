@@ -523,22 +523,31 @@ a {
     }
 
     &[data-vc-date-holiday], &[data-vc-date-weekend] {
-        .vc-date__btn {
-        color: #b64a09;
-    }
-        &[data-vc-date-selected] {
-            .vc-date__btn {
-                background: #f68619;
+
+        &[data-vc-date-hover=last], &[data-vc-date-hover=first] {
+            .vc-date__btn:hover {
+                background-color: #E2E8F0;
                 color: #141414;
             }
         }
 
-        &[date-vs-date-hover] {
-            .vc-date__btn {
-                background-color: #37ed05 !important;
-                color: #d80b0b;
+        .vc-date__btn {
+        color: #b64a09;
+            &:hover {
+                background: #fff;
             }
         }
+        &[data-vc-date-selected=middle] {
+                .vc-date__btn {
+                    background: #f68619;
+                    color: #141414;
+                    &:hover {
+                    background: #0758f1;
+                }
+            }
+        }
+
+
 
 
         &[data-vc-date-selected]  {
@@ -549,23 +558,23 @@ a {
 
     }
 
-    &[data-vc-date-selected] {
-        .vc-date__btn {
-            background: #f68619;
-            color: #fff ;
-
-            &:hover {
+        &[data-vc-date-selected] {
+            .vc-date__btn {
                 background: #f68619;
+                color: #fff ;
+
+                &:hover {
+                    background: #f68619;
+                }
             }
         }
-    }
 
 
-    &[data-vc-date-month=next], &[data-vc-date-month=prev] {
-        .vc-date__btn {
-            display: none;
+        &[data-vc-date-month=next], &[data-vc-date-month=prev] {
+            .vc-date__btn {
+                display: none;
+            }
         }
-    }
 
 
 
@@ -589,13 +598,16 @@ a {
                 }
             }
             &[data-vc-date-weekend] {
+
+
+
                     &[data-vc-date-selected] {
                     .vc-date__btn {
 
                         background: #f5e4c4;
                         color: #141414;
                         &:hover {
-                          background: #f68619;
+                          //background: #f68619;
                         }
                     }
                 }
