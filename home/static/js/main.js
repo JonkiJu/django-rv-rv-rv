@@ -8,20 +8,19 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const navbarOverlay = document.getElementById('navbarOverlay');
+  const navbarFadeElement = document.querySelector('.navbar__fade');
+
 
 
   const openNavbar = () => {
-    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
     navbarOverlay.classList.add('active');
-    document.body.classList.add('blur-background', 'no-scroll');
-    document.body.style.paddingRight = `${scrollbarWidth}px`;
+    navbarFadeElement.style.display = 'block';
   };
 
   const closeNavbar = () => {
 
     navbarOverlay.classList.remove('active');
-    document.body.classList.remove('blur-background', 'no-scroll');
-    document.body.style.paddingRight = '';
+    navbarFadeElement.style.display = 'none';
   };
 
   addEvent('openNavbar', 'click', openNavbar);
