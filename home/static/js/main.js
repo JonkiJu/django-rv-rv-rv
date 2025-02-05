@@ -9,107 +9,135 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const navbarOverlay = document.getElementById('navbarOverlay');
 
-  addEvent('openNavbar', 'click', () => {
+
+  const openNavbar = () => {
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
     navbarOverlay.classList.add('active');
     document.body.classList.add('blur-background', 'no-scroll');
-  });
+    document.body.style.paddingRight = `${scrollbarWidth}px`;
+  };
 
-  addEvent('closeNavbar', 'click', () => {
+  const closeNavbar = () => {
+
     navbarOverlay.classList.remove('active');
     document.body.classList.remove('blur-background', 'no-scroll');
-  });
+    document.body.style.paddingRight = '';
+  };
+
+  addEvent('openNavbar', 'click', openNavbar);
+  addEvent('closeNavbar', 'click', closeNavbar);
 
   document.addEventListener('click', (event) => {
     if (!navbarOverlay.contains(event.target) && !event.target.closest('#openNavbar')) {
-      navbarOverlay.classList.remove('active');
-      document.body.classList.remove('blur-background', 'no-scroll');
+      closeNavbar();
     }
   });
 
   // CALENDAR
   const initCalendar = () => {
-    const { Calendar } = window.VanillaCalendarPro;
+  const { Calendar } = window.VanillaCalendarPro;
 
-    const formatDateString = (dateString) => {
-      const date = new Date(dateString);
-      return `${String(date.getDate()).padStart(2, '0')}/${String(date.getMonth() + 1).padStart(2, '0')}/${date.getFullYear()}`;
-    };
-
-    const secondCalendarInput = document.getElementById('secondCalendarInput');
-    const calendarInputElement = document.getElementById('calendar');
-
-    secondCalendarInput.addEventListener('focus', () => {
-      calendarInput.show();
-      calendarInput.context.inputElement = secondCalendarInput;
-    });
-
-    document.addEventListener('click', (event) => {
-      const calendarElement = document.querySelector('.vc');
-      if (calendarElement && !calendarElement.contains(event.target) && !secondCalendarInput.contains(event.target) && !calendarInputElement.contains(event.target)) {
-        calendarInput.hide();
-      }
-    });
-
-    const options = {
-      inputMode: true,
-      positionToInput: 'left',
-      selectionDatesMode: 'multiple-ranged',
-      onInit(self) {
-        const btnEl = self.context.mainElement.querySelector('#btn-close');
-        const btnSubmit = self.context.mainElement.querySelector('#btn-submit');
-
-        if (btnEl) btnEl.addEventListener('click', self.hide);
-        if (btnSubmit) {
-          btnSubmit.addEventListener('click', () => {
-            if (self.context.selectedDates[0] && self.context.selectedDates[1]) {
-              const formattedStartDate = formatDateString(self.context.selectedDates[0]);
-              const formattedEndDate = formatDateString(self.context.selectedDates[1]);
-
-              if (self.context.inputElement === secondCalendarInput) {
-                calendarInputElement.value = formattedStartDate;
-              }
-              self.context.inputElement.value = formattedStartDate;
-              secondCalendarInput.value = formattedEndDate;
-              self.hide();
-            }
-          });
-        }
-
-        return () => {
-          if (btnEl) btnEl.removeEventListener('click', self.hide);
-          if (btnSubmit) btnSubmit.removeEventListener('click', self.hide);
-        };
-      },
-      layouts: {
-        default: `
-          <div class="vc-header" data-vc="header" role="toolbar" aria-label="Calendar Navigation">
-            <#ArrowPrev />
-            <div class="vc-header__content" data-vc-header="content">
-              <#Month />
-              <#Year />
-            </div>
-            <#ArrowNext />
-          </div>
-          <div class="vc-wrapper" data-vc="wrapper">
-            <#WeekNumbers />
-            <div class="vc-content" data-vc="content">
-              <#Week />
-              <#Dates />
-              <#DateRangeTooltip />
-            </div>
-          </div>
-          <#ControlTime />
-          <button id="btn-submit" type="button">CONFIRM</button>
-          <button id="btn-close" type="button">CLOSE</button>
-        `,
-      }
-    };
-
-    const calendarInput = new Calendar('#calendar', options);
-    calendarInput.init();
+  const formatDateString = (dateString) => {
+    const date = new Date(dateString);
+    return `${String(date.getDate()).padStart(2, '0')}/${String(date.getMonth() + 1).padStart(2, '0')}/${date.getFullYear()}`;
   };
 
-  initCalendar();
+  const secondCalendarInput = document.getElementById('secondCalendarInput');
+  const calendarInputElement = document.getElementById('calendar');
+
+  secondCalendarInput.addEventListener('click', () => {
+    calendarInput.show();
+    calendarInput.context.inputElement = secondCalendarInput;
+  });
+
+const calendarFadeElement = document.querySelector('.calendar__fade');
+
+const showCalendarFade = () => {
+  calendarFadeElement.style.display = 'block';
+};
+
+// Функція для приховування елемента calendar__fade та додавання атрибута до календаря
+const hideCalendarFade = () => {
+  calendarFadeElement.style.display = 'none';
+
+  const calendarElement = document.querySelector('.vc[data-vc="calendar"]');
+
+  if (calendarElement) {
+    // Додаємо атрибут 'data-vc-calendar-hidden' зі значенням 'true'
+    calendarElement.setAttribute('data-vc-calendar-hidden', 'true');
+    // Викликаємо метод close для закриття календаря, якщо він доступний
+    if (calendarElement.VanillaCalendarProInstance) {
+      calendarElement.VanillaCalendarProInstance.close();
+    }
+  }
+};
+
+// Додаємо обробники подій для показу та приховування calendar__fade
+calendarInputElement.addEventListener('click', showCalendarFade);
+secondCalendarInput.addEventListener('click', showCalendarFade);
+calendarFadeElement.addEventListener('click', hideCalendarFade);
+
+  const options = {
+    inputMode: true,
+    positionToInput: 'left',
+    selectionDatesMode: 'multiple-ranged',
+    onInit(self) {
+      const btnEl = self.context.mainElement.querySelector('#btn-close');
+      const btnSubmit = self.context.mainElement.querySelector('#btn-submit');
+
+      if (btnEl) btnEl.addEventListener('click', self.hide);
+      if (btnSubmit) {
+        btnSubmit.addEventListener('click', () => {
+          if (self.context.selectedDates[0] && self.context.selectedDates[1]) {
+            const formattedStartDate = formatDateString(self.context.selectedDates[0]);
+            const formattedEndDate = formatDateString(self.context.selectedDates[1]);
+
+            if (self.context.inputElement === secondCalendarInput) {
+              calendarInputElement.value = formattedStartDate;
+            }
+            self.context.inputElement.value = formattedStartDate;
+            secondCalendarInput.value = formattedEndDate;
+            self.hide();
+          }
+        });
+      }
+
+      return () => {
+        if (btnEl) btnEl.removeEventListener('click', self.hide);
+        if (btnSubmit) btnSubmit.removeEventListener('click', self.hide);
+      };
+    },
+    layouts: {
+      default: `
+        <div class="vc-header" data-vc="header" role="toolbar" aria-label="Calendar Navigation">
+          <#ArrowPrev />
+          <div class="vc-header__content" data-vc-header="content">
+            <#Month />
+            <#Year />
+          </div>
+          <#ArrowNext />
+        </div>
+        <div class="vc-wrapper" data-vc="wrapper">
+          <#WeekNumbers />
+          <div class="vc-content" data-vc="content">
+            <#Week />
+            <#Dates />
+            <#DateRangeTooltip />
+          </div>
+        </div>
+        <#ControlTime />
+        <button id="btn-submit" type="button">CONFIRM</button>
+        <button id="btn-close" type="button">CLOSE</button>
+      `,
+    }
+  };
+
+  const calendarInput = new Calendar('#calendar', options);
+  calendarInput.init();
+};
+
+initCalendar();
+
 
   // GUEST
   const initGuestInput = () => {

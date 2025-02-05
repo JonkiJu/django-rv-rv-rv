@@ -2,7 +2,12 @@
 @import "header";
 @import "footer";
 
-
+.calendar__fade {
+    position: fixed;
+    inset: 0;
+    z-index: 1499;
+    display: none;
+}
 a {
     display: block;
     text-decoration: auto;
@@ -423,10 +428,10 @@ a {
 
 [data-vc=calendar] {
     border-radius: unset;
-    background-color: #fff;
+    background-color: #ffffff !important;
+    z-index: 1500;
 }
 .vc {
-    background-color: #222020;
     //margin: 5px;
 
     #btn-close, #btn-submit {
@@ -489,26 +494,40 @@ a {
         }
     }
 
-
+    .vc-months__month, .vc-years__year {
+        &[data-vc-months-month-selected], &[data-vc-years-year-selected] {
+            background: #f68619;
+            color: #fff;
+        }
+    }
     .vc-date {
         &[data-vc-date-holiday], &[data-vc-date-weekend] {
-            &[data-vc-date-month=next] {
+            &[data-vc-date-month=next], [data-vc-date-month=prev] {
                 .vc-date__btn {
-                    color: #94a3b8;
+                    display: none;
                 }
             }
+
             &[data-vc-date-selected] {
-            .vc-date__btn {
-                background: #f68619;
-                &:hover {
-                  background: #f68619;
+                .vc-date__btn {
+                    background: #f68619;
+
+                    &:hover {
+                        background: #f68619;
+                    }
                 }
             }
-        }
             .vc-date__btn {
                 color: #b64a09;
             }
         }
+            &[data-vc-date-month=next], &[data-vc-date-month=prev] {
+                .vc-date__btn {
+                    display: none;
+                }
+            }
+
+
 
 
         &[data-vc-date-selected] {
