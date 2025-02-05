@@ -1,0 +1,890 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'ChakraPetch';
+  font-weight: bold;
+  src: url("/static/fonts/ChakraPetch-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'ChakraPetch';
+  font-weight: normal;
+  src: url("/static/fonts/ChakraPetch-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'ProximaNova';
+  font-weight: bold;
+  src: url("/static/fonts/proximanova_bold.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'ProximaNova';
+  font-weight: normal;
+  src: url("/static/fonts/proximanova_regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: bold;
+  src: url("/static/fonts/Inter_18pt-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: normal;
+  src: url("/static/fonts/Inter_18pt-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Almarai';
+  font-weight: normal;
+  src: url("/static/fonts/Almarai-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Alike';
+  font-weight: normal;
+  src: url("/static/fonts/Alike-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'ChakraPetch';
+  font-weight: bold;
+  src: url("/static/fonts/ChakraPetch-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'ChakraPetch';
+  font-weight: normal;
+  src: url("/static/fonts/ChakraPetch-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'ProximaNova';
+  font-weight: bold;
+  src: url("/static/fonts/proximanova_bold.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'ProximaNova';
+  font-weight: normal;
+  src: url("/static/fonts/proximanova_regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: bold;
+  src: url("/static/fonts/Inter_18pt-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: normal;
+  src: url("/static/fonts/Inter_18pt-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Almarai';
+  font-weight: normal;
+  src: url("/static/fonts/Almarai-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Alike';
+  font-weight: normal;
+  src: url("/static/fonts/Alike-Regular.ttf") format("truetype"); }
+
+/* line 3, home/static/scss/header.scss */
+header .btn__change {
+  background-image: url(/static/img/header_btn.svg);
+  width: 180px;
+  height: 30px;
+  border: none;
+  font-family: "ChakraPetch", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #fff; }
+
+/* line 18, home/static/scss/header.scss */
+.navbar-overlay {
+  position: fixed;
+  top: 0;
+  right: -320px;
+  width: 320px;
+  height: 100%;
+  background: #F5E4C4;
+  transition: right 0.3s ease;
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+  padding-right: 30px;
+  /* Стилізація скролу */ }
+  /* line 31, home/static/scss/header.scss */
+  .navbar-overlay.active {
+    right: 0; }
+  /* line 35, home/static/scss/header.scss */
+  .navbar-overlay .navbar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0px 30px 30px;
+    font-family: "Alike", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #141414; }
+    /* line 44, home/static/scss/header.scss */
+    .navbar-overlay .navbar-header .close-btn {
+      font-size: 1.5rem;
+      cursor: pointer; }
+  /* line 50, home/static/scss/header.scss */
+  .navbar-overlay .navbar-nav-wrapper {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 10px; }
+  /* line 56, home/static/scss/header.scss */
+  .navbar-overlay .navbar-nav {
+    padding-left: 30px;
+    font-family: "Almarai", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #141414; }
+  /* line 65, home/static/scss/header.scss */
+  .navbar-overlay .navbar-nav-wrapper::-webkit-scrollbar {
+    width: 8px; }
+  /* line 69, home/static/scss/header.scss */
+  .navbar-overlay .navbar-nav-wrapper::-webkit-scrollbar-track {
+    background: #ececec; }
+  /* line 73, home/static/scss/header.scss */
+  .navbar-overlay .navbar-nav-wrapper::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px; }
+  /* line 78, home/static/scss/header.scss */
+  .navbar-overlay .navbar-nav-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #555; }
+
+/* line 83, home/static/scss/header.scss */
+body.blur-background::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(245, 228, 196, 0.4);
+  backdrop-filter: blur(5px);
+  z-index: 1040;
+  pointer-events: none;
+  transition: backdrop-filter 0.3s ease, background 0.3s ease; }
+
+/* line 96, home/static/scss/header.scss */
+body.no-scroll {
+  overflow: hidden; }
+
+@font-face {
+  font-family: 'ChakraPetch';
+  font-weight: bold;
+  src: url("/static/fonts/ChakraPetch-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'ChakraPetch';
+  font-weight: normal;
+  src: url("/static/fonts/ChakraPetch-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'ProximaNova';
+  font-weight: bold;
+  src: url("/static/fonts/proximanova_bold.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'ProximaNova';
+  font-weight: normal;
+  src: url("/static/fonts/proximanova_regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: bold;
+  src: url("/static/fonts/Inter_18pt-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: normal;
+  src: url("/static/fonts/Inter_18pt-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Almarai';
+  font-weight: normal;
+  src: url("/static/fonts/Almarai-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'Alike';
+  font-weight: normal;
+  src: url("/static/fonts/Alike-Regular.ttf") format("truetype"); }
+
+/* line 3, home/static/scss/footer.scss */
+.bg-footer {
+  background: #f8f8f8; }
+
+/* line 10, home/static/scss/footer.scss */
+footer .col h5 {
+  padding-bottom: 10px;
+  font-family: "ProximaNova", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: justify;
+  color: #242424; }
+
+/* line 20, home/static/scss/footer.scss */
+footer .col_container {
+  border-top: 1px solid #d9d9d9; }
+  /* line 23, home/static/scss/footer.scss */
+  footer .col_container a {
+    font-family: "ProximaNova", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #242424;
+    text-decoration: none; }
+
+/* line 34, home/static/scss/footer.scss */
+footer .footer__btn .btn {
+  background: #f68619;
+  width: 180px;
+  height: 30px;
+  font-family: "ProximaNova", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+/* line 51, home/static/scss/footer.scss */
+.gw-site {
+  background: #f68619;
+  z-index: 1;
+  height: 30px; }
+  /* line 55, home/static/scss/footer.scss */
+  .gw-site p {
+    font-family: "ChakraPetch", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #fff; }
+
+/* line 6, home/static/scss/main.scss */
+a {
+  display: block;
+  text-decoration: auto; }
+
+/* line 10, home/static/scss/main.scss */
+.top__container {
+  max-width: 1400px;
+  margin: 0 auto; }
+
+/* line 15, home/static/scss/main.scss */
+.jumbotron {
+  position: relative;
+  max-width: 1400px;
+  height: 600px;
+  margin: 0 auto 100px auto; }
+  /* line 20, home/static/scss/main.scss */
+  .jumbotron img {
+    position: absolute; }
+  /* line 23, home/static/scss/main.scss */
+  .jumbotron .container {
+    position: relative; }
+  /* line 28, home/static/scss/main.scss */
+  .jumbotron .jumbotron__section {
+    max-width: 580px; }
+  /* line 31, home/static/scss/main.scss */
+  .jumbotron .jumbotron__title {
+    font-family: "ChakraPetch", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff; }
+    @media (max-width: 768px) {
+      /* line 31, home/static/scss/main.scss */
+      .jumbotron .jumbotron__title {
+        font-size: 24px; } }
+  /* line 42, home/static/scss/main.scss */
+  .jumbotron .jumbotron__text {
+    font-family: "ChakraPetch", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    color: #fff; }
+  /* line 50, home/static/scss/main.scss */
+  .jumbotron .jumbotron__info {
+    border-radius: 20px;
+    padding: 30px;
+    background: #f8f8f8; }
+    /* line 54, home/static/scss/main.scss */
+    .jumbotron .jumbotron__info .btn {
+      border-radius: 20px;
+      max-width: 220px; }
+    /* line 59, home/static/scss/main.scss */
+    .jumbotron .jumbotron__info .jumbotron__info-title {
+      font-family: "ChakraPetch", sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      color: #242424; }
+    /* line 65, home/static/scss/main.scss */
+    .jumbotron .jumbotron__info .jumbotron__info-text {
+      font-family: "ChakraPetch", sans-serif;
+      font-weight: 400;
+      font-size: 12px;
+      color: #242424; }
+      /* line 70, home/static/scss/main.scss */
+      .jumbotron .jumbotron__info .jumbotron__info-text div {
+        position: relative; }
+        /* line 72, home/static/scss/main.scss */
+        .jumbotron .jumbotron__info .jumbotron__info-text div #calendar, .jumbotron .jumbotron__info .jumbotron__info-text div #secondCalendarInput {
+          width: 83px;
+          border: none;
+          background: #f8f8f8;
+          cursor: pointer; }
+          /* line 77, home/static/scss/main.scss */
+          .jumbotron .jumbotron__info .jumbotron__info-text div #calendar::placeholder, .jumbotron .jumbotron__info .jumbotron__info-text div #secondCalendarInput::placeholder {
+            color: #242424; }
+          /* line 80, home/static/scss/main.scss */
+          .jumbotron .jumbotron__info .jumbotron__info-text div #calendar:focus, .jumbotron .jumbotron__info .jumbotron__info-text div #secondCalendarInput:focus {
+            outline: none; }
+        /* line 84, home/static/scss/main.scss */
+        .jumbotron .jumbotron__info .jumbotron__info-text div img {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 75px;
+          cursor: pointer; }
+
+/* line 95, home/static/scss/main.scss */
+.container {
+  max-width: 1180px; }
+  /* line 97, home/static/scss/main.scss */
+  .container .lorem__photo {
+    max-width: 580px; }
+    /* line 99, home/static/scss/main.scss */
+    .container .lorem__photo img {
+      max-width: 180px; }
+  /* line 103, home/static/scss/main.scss */
+  .container .lorem__text {
+    max-width: 480px; }
+    /* line 106, home/static/scss/main.scss */
+    .container .lorem__text h2 {
+      font-family: "ChakraPetch", sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #f68619; }
+    /* line 113, home/static/scss/main.scss */
+    .container .lorem__text p {
+      font-family: "ChakraPetch", sans-serif;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 200%;
+      text-align: justify;
+      color: #242424; }
+
+/* line 126, home/static/scss/main.scss */
+.container__loren {
+  margin-bottom: 100px; }
+
+/* line 130, home/static/scss/main.scss */
+.container__city {
+  margin-bottom: 148px; }
+
+/* line 133, home/static/scss/main.scss */
+.card__city {
+  position: relative; }
+  /* line 135, home/static/scss/main.scss */
+  .card__city .card__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+  /* line 142, home/static/scss/main.scss */
+  .card__city h2 {
+    font-family: "ChakraPetch", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    color: #fff; }
+  /* line 149, home/static/scss/main.scss */
+  .card__city h3 {
+    font-family: "ChakraPetch", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: #fff; }
+  /* line 156, home/static/scss/main.scss */
+  .card__city .card__arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  /* line 163, home/static/scss/main.scss */
+  .card__city .lear__more {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); }
+  /* line 170, home/static/scss/main.scss */
+  .card__city p {
+    text-align: center;
+    font-family: "ChakraPetch", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #fff; }
+  /* line 177, home/static/scss/main.scss */
+  .card__city .black {
+    color: #242424; }
+
+/* line 187, home/static/scss/main.scss */
+.section__text-lorem {
+  position: relative;
+  max-width: 1400px;
+  height: 400px;
+  margin: 0 auto 100px auto; }
+  /* line 193, home/static/scss/main.scss */
+  .section__text-lorem .text__lorem-bg {
+    position: absolute; }
+  /* line 197, home/static/scss/main.scss */
+  .section__text-lorem .container {
+    position: relative;
+    z-index: 2; }
+    /* line 201, home/static/scss/main.scss */
+    .section__text-lorem .container .text__lorem {
+      background: #a77d53;
+      border-radius: 20px;
+      padding: 50px 50px 50px 80px;
+      position: relative; }
+      @media (max-width: 500px) {
+        /* line 201, home/static/scss/main.scss */
+        .section__text-lorem .container .text__lorem {
+          padding: 25px; } }
+      /* line 211, home/static/scss/main.scss */
+      .section__text-lorem .container .text__lorem .white__line {
+        position: absolute;
+        left: 50px;
+        bottom: 20%; }
+        @media (max-width: 500px) {
+          /* line 211, home/static/scss/main.scss */
+          .section__text-lorem .container .text__lorem .white__line {
+            display: none; } }
+    /* line 222, home/static/scss/main.scss */
+    .section__text-lorem .container .text__lorem-title {
+      font-family: "ChakraPetch", sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #fff; }
+    /* line 229, home/static/scss/main.scss */
+    .section__text-lorem .container .text__lorem-text {
+      font-family: "ChakraPetch", sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      text-align: justify;
+      color: #fff; }
+    /* line 236, home/static/scss/main.scss */
+    .section__text-lorem .container a {
+      font-family: "ChakraPetch", sans-serif;
+      font-weight: 400;
+      font-size: 12px;
+      color: #fff;
+      text-decoration: none; }
+
+/* line 249, home/static/scss/main.scss */
+.row__for-text {
+  margin-bottom: 80px; }
+  /* line 251, home/static/scss/main.scss */
+  .row__for-text h2 {
+    font-family: "ChakraPetch", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #f68619; }
+  /* line 258, home/static/scss/main.scss */
+  .row__for-text p {
+    font-family: "ChakraPetch", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 200%;
+    text-align: justify;
+    color: #242424; }
+  /* line 266, home/static/scss/main.scss */
+  .row__for-text img {
+    padding: 12px 0; }
+
+/* line 272, home/static/scss/main.scss */
+.container__faq {
+  margin-bottom: 100px;
+  position: relative; }
+  /* line 275, home/static/scss/main.scss */
+  .container__faq .faq__arrow {
+    position: absolute;
+    top: 70px;
+    left: -110px; }
+    @media (max-width: 1440px) {
+      /* line 275, home/static/scss/main.scss */
+      .container__faq .faq__arrow {
+        display: none; } }
+/* line 285, home/static/scss/main.scss */
+.accordion-item,
+.accordion-button,
+.accordion-collapse {
+  border: none; }
+
+/* line 290, home/static/scss/main.scss */
+.accordion__title {
+  font-family: "ChakraPetch", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #f68619;
+  padding-bottom: 30px; }
+
+/* line 299, home/static/scss/main.scss */
+.accordion-button.collapsed {
+  border-bottom: none;
+  color: #242424; }
+
+/* line 304, home/static/scss/main.scss */
+.accordion-button:not(.collapsed) {
+  background-color: #f6f7f7;
+  color: #242424; }
+
+/* Додавання верхнього бордера до accordion-collapse, коли він активований */
+/* line 312, home/static/scss/main.scss */
+.accordion-collapse.collapse.show {
+  border-top: 1px solid #D9D9D9;
+  /* Задайте ваш бажаний колір та товщину бордера */ }
+
+/* line 316, home/static/scss/main.scss */
+.accordion-collapse.collapsing {
+  border-top: 1px solid #D9D9D9;
+  /* Задайте ваш бажаний колір та товщину бордера */ }
+
+/* line 322, home/static/scss/main.scss */
+.accordion-button {
+  font-family: "ChakraPetch", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #242424;
+  background-color: #f6f7f7; }
+  /* line 333, home/static/scss/main.scss */
+  .accordion-button:focus {
+    box-shadow: none;
+    outline: none; }
+
+/* Стиль активного вмісту акордеону */
+/* line 340, home/static/scss/main.scss */
+.accordion-collapse.colapsing {
+  background-color: #f6f7f7; }
+
+/* line 343, home/static/scss/main.scss */
+.accordion-collapse.show {
+  background-color: #f6f7f7; }
+
+/* line 348, home/static/scss/main.scss */
+.accordion-button::after {
+  content: '';
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  background-image: url('data:image/svg+xml;utf8,<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="17" cy="17" r="16" stroke="%23242424" stroke-width="2"/><path d="M17 11V23M23 17H11" stroke="black" stroke-width="2" stroke-linecap="round"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.3s ease-in-out; }
+
+/* line 359, home/static/scss/main.scss */
+.accordion-button[aria-expanded="true"]::after {
+  background-image: url('data:image/svg+xml;utf8,<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="17" cy="17" r="16" stroke="%23242424" stroke-width="2"/><path d="M23 17H11" stroke="black" stroke-width="2" stroke-linecap="round"/></svg>'); }
+
+/* line 363, home/static/scss/main.scss */
+.accordion-button::before {
+  content: none;
+  /* Видаляємо стандартну стрілку */ }
+
+/* line 371, home/static/scss/main.scss */
+.popular {
+  margin-bottom: 100px; }
+
+/* line 374, home/static/scss/main.scss */
+.popular__title {
+  font-family: "ChakraPetch", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #f68619;
+  padding-bottom: 30px; }
+
+/* line 383, home/static/scss/main.scss */
+.popular__title-btn {
+  border-radius: 20px;
+  padding: 10px 20px;
+  background: #f8f8f8;
+  transition: all 0.5s; }
+  /* line 390, home/static/scss/main.scss */
+  .popular__title-btn:hover {
+    background: #a77d53; }
+    /* line 392, home/static/scss/main.scss */
+    .popular__title-btn:hover h2 {
+      color: #fff; }
+    /* line 395, home/static/scss/main.scss */
+    .popular__title-btn:hover p {
+      color: #fff; }
+  /* line 400, home/static/scss/main.scss */
+  .popular__title-btn h2 {
+    font-family: "ChakraPetch", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #242424;
+    text-align: justify;
+    transition: all 0.5s; }
+  /* line 409, home/static/scss/main.scss */
+  .popular__title-btn p {
+    font-family: "ChakraPetch", sans-serif;
+    font-size: 14px;
+    color: #242424;
+    text-align: justify;
+    font-weight: 400;
+    transition: all 0.5s; }
+
+/* line 424, home/static/scss/main.scss */
+[data-vc=calendar] {
+  border-radius: unset;
+  background-color: #fff; }
+
+/* line 428, home/static/scss/main.scss */
+.vc {
+  background-color: #222020; }
+  /* line 432, home/static/scss/main.scss */
+  .vc #btn-close, .vc #btn-submit {
+    font-family: "Almarai", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #141414;
+    width: 245px;
+    height: 49px; }
+  /* line 440, home/static/scss/main.scss */
+  .vc #btn-submit {
+    background: #f68619;
+    margin-bottom: 10px;
+    border: none; }
+  /* line 446, home/static/scss/main.scss */
+  .vc #btn-close {
+    background: #fff;
+    border: 1px solid; }
+  /* line 455, home/static/scss/main.scss */
+  .vc .vc-header .vc-month,
+  .vc .vc-header .vc-year {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    color: #f68619; }
+  /* line 464, home/static/scss/main.scss */
+  .vc .vc-header .vc-arrow:before {
+    background-image: url(/static/img/calendar-next-arrow.svg); }
+  /* line 467, home/static/scss/main.scss */
+  .vc .vc-header [data-vc-arrow=next]:before {
+    transform: rotate(0deg); }
+  /* line 470, home/static/scss/main.scss */
+  .vc .vc-header [data-vc-arrow=prev]:before {
+    transform: rotate(180deg); }
+  /* line 478, home/static/scss/main.scss */
+  .vc .vc-wrapper {
+    margin-bottom: 30px; }
+    /* line 480, home/static/scss/main.scss */
+    .vc .vc-wrapper .vc-week__day {
+      font-family: "Almarai", sans-serif;
+      font-weight: 400;
+      font-size: 15px;
+      text-align: center;
+      color: #141414; }
+      /* line 487, home/static/scss/main.scss */
+      .vc .vc-wrapper .vc-week__day[data-vc-week-day-off] {
+        color: #b64a09; }
+    /* line 496, home/static/scss/main.scss */
+    .vc .vc-wrapper .vc-date[data-vc-date-holiday][data-vc-date-month=next] .vc-date__btn, .vc .vc-wrapper .vc-date[data-vc-date-weekend][data-vc-date-month=next] .vc-date__btn {
+      color: #94a3b8; }
+    /* line 501, home/static/scss/main.scss */
+    .vc .vc-wrapper .vc-date[data-vc-date-holiday][data-vc-date-selected] .vc-date__btn, .vc .vc-wrapper .vc-date[data-vc-date-weekend][data-vc-date-selected] .vc-date__btn {
+      background: #f68619; }
+      /* line 503, home/static/scss/main.scss */
+      .vc .vc-wrapper .vc-date[data-vc-date-holiday][data-vc-date-selected] .vc-date__btn:hover, .vc .vc-wrapper .vc-date[data-vc-date-weekend][data-vc-date-selected] .vc-date__btn:hover {
+        background: #f68619; }
+    /* line 508, home/static/scss/main.scss */
+    .vc .vc-wrapper .vc-date[data-vc-date-holiday] .vc-date__btn, .vc .vc-wrapper .vc-date[data-vc-date-weekend] .vc-date__btn {
+      color: #b64a09; }
+    /* line 515, home/static/scss/main.scss */
+    .vc .vc-wrapper .vc-date[data-vc-date-selected] .vc-date__btn {
+      background: #f68619; }
+      /* line 517, home/static/scss/main.scss */
+      .vc .vc-wrapper .vc-date[data-vc-date-selected] .vc-date__btn:hover {
+        background: #f68619; }
+    /* line 524, home/static/scss/main.scss */
+    .vc .vc-wrapper .vc-date[data-vc-date-selected=middle][data-vc-date-selected] .vc-date__btn {
+      background: #f5e4c4;
+      color: #141414; }
+      /* line 527, home/static/scss/main.scss */
+      .vc .vc-wrapper .vc-date[data-vc-date-selected=middle][data-vc-date-selected] .vc-date__btn:hover {
+        background: #f68619; }
+    /* line 534, home/static/scss/main.scss */
+    .vc .vc-wrapper .vc-date[data-vc-date-selected=middle][data-vc-date-weekend][data-vc-date-selected] .vc-date__btn {
+      background: #f5e4c4;
+      color: #141414; }
+      /* line 538, home/static/scss/main.scss */
+      .vc .vc-wrapper .vc-date[data-vc-date-selected=middle][data-vc-date-weekend][data-vc-date-selected] .vc-date__btn:hover {
+        background: #f68619; }
+    /* line 547, home/static/scss/main.scss */
+    .vc .vc-wrapper .vc-date[data-vc-date-today] .vc-date__btn {
+      font-family: "Inter", sans-serif;
+      font-weight: 400;
+      font-size: 15px;
+      color: #fff;
+      background: #f68619; }
+      /* line 554, home/static/scss/main.scss */
+      .vc .vc-wrapper .vc-date[data-vc-date-today] .vc-date__btn:hover {
+        color: #f68619; }
+    /* line 561, home/static/scss/main.scss */
+    .vc .vc-wrapper .vc-date__btn {
+      font-family: "Inter", sans-serif;
+      font-weight: 400;
+      font-size: 15px;
+      text-align: center;
+      color: #141414;
+      background: #fff; }
+
+/* line 576, home/static/scss/main.scss */
+#guestInput {
+  max-width: 150px;
+  height: 16px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background: #f8f8f8;
+  font-family: "ChakraPetch", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #242424; }
+  /* line 589, home/static/scss/main.scss */
+  #guestInput::placeholder {
+    color: #242424; }
+  /* line 592, home/static/scss/main.scss */
+  #guestInput:focus {
+    outline: none; }
+
+/* line 597, home/static/scss/main.scss */
+.guest__input-window {
+  position: absolute;
+  transition: opacity 0.2s ease, visibility 0.3s ease;
+  width: 89px;
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1000; }
+  /* line 607, home/static/scss/main.scss */
+  .guest__input-window.hidden {
+    opacity: 0;
+    visibility: hidden; }
+  /* line 612, home/static/scss/main.scss */
+  .guest__input-window.visible {
+    opacity: 1;
+    visibility: visible; }
+  /* line 617, home/static/scss/main.scss */
+  .guest__input-window__controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; }
+  /* line 624, home/static/scss/main.scss */
+  .guest__input-window .control__btn {
+    width: 21px;
+    height: 21px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    transition: filter 0.3s ease; }
+    /* line 633, home/static/scss/main.scss */
+    .guest__input-window .control__btn.minus {
+      background-image: url("/static/img/guest-minus-btn.svg"); }
+    /* line 637, home/static/scss/main.scss */
+    .guest__input-window .control__btn.plus {
+      background-image: url("/static/img/guest-plus-btn.svg"); }
+      /* line 639, home/static/scss/main.scss */
+      .guest__input-window .control__btn.plus:hover {
+        filter: invert(50%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(90%) contrast(90%); }
+  /* line 645, home/static/scss/main.scss */
+  .guest__input-window .ok__btn {
+    font-family: "Almarai", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #141414;
+    width: 69px;
+    height: 30px;
+    background-color: #f68619;
+    border: none;
+    cursor: pointer; }
+
+/* line 667, home/static/scss/main.scss */
+#locationInput {
+  width: 200px;
+  font-family: "ChakraPetch", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #242424;
+  cursor: pointer;
+  background: #f8f8f8;
+  border: none; }
+  /* line 677, home/static/scss/main.scss */
+  #locationInput::placeholder {
+    color: #242424; }
+  /* line 680, home/static/scss/main.scss */
+  #locationInput:focus {
+    outline: none; }
+
+/* line 685, home/static/scss/main.scss */
+.location__dropdown {
+  position: absolute;
+  width: 193px;
+  padding: 10px;
+  max-height: 199px;
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  /* Стилізація скролу */ }
+  /* line 699, home/static/scss/main.scss */
+  .location__dropdown.visible {
+    opacity: 1;
+    visibility: visible; }
+  /* line 704, home/static/scss/main.scss */
+  .location__dropdown .location__dropdown-inner {
+    max-height: 179px;
+    overflow-y: auto; }
+    /* line 708, home/static/scss/main.scss */
+    .location__dropdown .location__dropdown-inner::-webkit-scrollbar {
+      width: 3px; }
+    /* line 712, home/static/scss/main.scss */
+    .location__dropdown .location__dropdown-inner::-webkit-scrollbar-track {
+      background: #d9d9d9;
+      border-radius: 5px; }
+    /* line 717, home/static/scss/main.scss */
+    .location__dropdown .location__dropdown-inner::-webkit-scrollbar-thumb {
+      background: #f68619;
+      border-radius: 4px; }
+    /* line 722, home/static/scss/main.scss */
+    .location__dropdown .location__dropdown-inner::-webkit-scrollbar-thumb:hover {
+      background: #555; }
+  /* line 727, home/static/scss/main.scss */
+  .location__dropdown ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; }
+  /* line 733, home/static/scss/main.scss */
+  .location__dropdown .location__dropdown-item {
+    cursor: pointer;
+    font-family: "Almarai", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #141414; }
+    /* line 740, home/static/scss/main.scss */
+    .location__dropdown .location__dropdown-item:hover {
+      background-color: #f0f0f0; }

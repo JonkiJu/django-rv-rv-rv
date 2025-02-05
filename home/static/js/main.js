@@ -7,15 +7,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // NAVBAR
+  const navbarOverlay = document.getElementById('navbarOverlay');
+
   addEvent('openNavbar', 'click', () => {
-    document.getElementById('navbarOverlay').classList.add('active');
-    document.body.classList.add('blur-background');
+    navbarOverlay.classList.add('active');
+    document.body.classList.add('blur-background', 'no-scroll');
   });
 
   addEvent('closeNavbar', 'click', () => {
-    document.getElementById('navbarOverlay').classList.remove('active');
-    document.body.classList.remove('blur-background');
+    navbarOverlay.classList.remove('active');
+    document.body.classList.remove('blur-background', 'no-scroll');
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!navbarOverlay.contains(event.target) && !event.target.closest('#openNavbar')) {
+      navbarOverlay.classList.remove('active');
+      document.body.classList.remove('blur-background', 'no-scroll');
+    }
   });
 
   // CALENDAR

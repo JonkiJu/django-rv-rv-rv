@@ -79,9 +79,20 @@
                             <input type="text" id="guestInput" readonly placeholder="0 guest">
                             <div id="inputWindow" class="guest__input-window hidden">
                                 <div class="guest__input-window__controls">
-                                    <button id="decreaseBtn" class="control__btn minus"></button>
+                                    <button id="decreaseBtn" class="control__btn minus">
+                                        <svg width="22" height="21" viewBox="0 0 22 21" fill="none" class="icon" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="1" y="0.5" width="20" height="20" stroke="#D9D9D9" class="icon-stroke"/>
+                                            <rect x="7.5" y="10" width="7" height="1" fill="#D9D9D9" class="icon-fill"/>
+                                        </svg>
+                                    </button>
                                     <span id="guestCount">0</span>
-                                    <button id="increaseBtn" class="control__btn plus"></button>
+                                    <button id="increaseBtn" class="control__btn plus">
+                                        <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+                                            <rect x="1" y="0.5" width="20" height="20" class="icon-stroke"/>
+                                            <path d="M7.5 10H14.5V11H7.5V10Z" class="icon-fill"/>
+                                            <path d="M11.5 7L11.5 14H10.5L10.5 7L11.5 7Z" class="icon-fill"/>
+                                        </svg>
+                                    </button>
                                 </div>
                                 <button id="okBtn" class="ok__btn">OK</button>
                             </div>
