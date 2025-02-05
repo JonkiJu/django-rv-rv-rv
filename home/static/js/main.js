@@ -7,20 +7,44 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+
+
   const navbarOverlay = document.getElementById('navbarOverlay');
   const navbarFadeElement = document.querySelector('.navbar__fade');
+  const getScrollbarWidth = () => {
+      // Створюємо невидимий елемент для вимірювання ширини скролбара
+      const outer = document.createElement('div');
+      outer.style.visibility = 'hidden';
+      outer.style.overflow = 'scroll';
+      outer.style.position = 'absolute';
+      outer.style.top = '-9999px';
+      document.body.appendChild(outer);
 
+      const inner = document.createElement('div');
+      outer.appendChild(inner);
+
+      const scrollbarWidth = outer.offsetWidth - inner.offsetWidth;
+      document.body.removeChild(outer);
+
+      return scrollbarWidth;
+  };
 
 
   const openNavbar = () => {
+    const scrollbarWidth = getScrollbarWidth();
     navbarOverlay.classList.add('active');
     navbarFadeElement.style.display = 'block';
+    document.body.classList.add('no-scroll');
+    document.body.style.paddingRight = `${scrollbarWidth}px`;
+
   };
 
   const closeNavbar = () => {
-
+    document.body.classList.remove('no-scroll');
+    document.body.style.paddingRight = '0';
     navbarOverlay.classList.remove('active');
     navbarFadeElement.style.display = 'none';
+
   };
 
   addEvent('openNavbar', 'click', openNavbar);
